@@ -14,6 +14,7 @@ public class TestSelenium {
 		WebDriver driver = new ChromeDriver(); //inicializando nuestro chrome driver
 		driver.get("https://www.google.com");
 		//Agregando linea de codigo
+		//Linea 2
 		//linea 3
 	}
 
