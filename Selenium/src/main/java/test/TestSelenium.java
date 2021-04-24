@@ -13,6 +13,7 @@ public class TestSelenium {
 		System.setProperty("webdriver.chrome.driver", exePath + "chromedriver.exe"); //agregando la propiedad con la ruta del chrome driver
 		WebDriver driver = new ChromeDriver(); //inicializando nuestro chrome driver
 		driver.get("https://www.google.com");
+		//Agregando linea de codigo
 		
 	}
 
