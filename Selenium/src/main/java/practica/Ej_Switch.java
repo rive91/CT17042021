@@ -3,7 +3,7 @@ package practica;
 public class Ej_Switch {
 
 	public static void main(String[] args) {
-		int i = 10;
+		i = 10;
 		
 		switch (i) {
 		case 0:
