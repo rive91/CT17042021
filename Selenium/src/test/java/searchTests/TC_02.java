@@ -6,6 +6,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import commonMethods.CommonMethods;
 import driverSetup.DriverSetup;
 import globalVariables.GlobalVariables;
 import navigationPages.DashboardPage;
@@ -49,6 +50,7 @@ public class TC_02 {
 	
 	@AfterTest
 	public void closeDriver() {
+		CommonMethods.takeScreenshot(driver, "TC_02_Search_Nathan");
 		driver.quit();
 	}
 }

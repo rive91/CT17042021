@@ -1,0 +1,12 @@
+{
+  "admin": {
+	  "username":"Admin",
+	  "password":"admin123"
+	  
+  }
+  
+  "vendedor": {
+	  "username":"vendor",
+	  "password":"admin123"
+  }
+}
