@@ -12,7 +12,7 @@ import navigationPages.DashboardPage;
 import navigationPages.LoginPage;
 
 public class TC_01 {
-	WebDriver driver = DriverSetup.setupDriver();
+	WebDriver driver = DriverSetup.setupDriver("firefox");
 
 	// Page Object
 	LoginPage login = new LoginPage(driver);
@@ -34,9 +34,9 @@ public class TC_01 {
 
 	@Test
 	public void TC_01_CorrectLogin() throws InterruptedException {
-		login.login(userE, passwordE);
-		
+		login.login(userE, passwordE);		
 		dashboard.logout();
+
 	}
 
 	@AfterTest

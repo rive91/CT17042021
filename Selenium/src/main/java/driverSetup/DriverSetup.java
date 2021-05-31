@@ -6,6 +6,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class DriverSetup {
 	
@@ -17,5 +18,26 @@ public class DriverSetup {
 		return driver;
 		
 	}
-
+	
+	
+	public static WebDriver setupDriver(String browser) {
+		WebDriver driver = null;
+		String exePath;
+		switch(browser) {
+		case "chrome":
+			exePath = Paths.get("").toAbsolutePath().toString() + File.separator + "driver" + File.separator; //Setear el la ruta de nuestro chromredriver
+			System.setProperty("webdriver.chrome.driver", exePath + "chromedriver.exe"); //agregando la propiedad con la ruta del chrome driver
+			driver = new ChromeDriver(); //inicializando nuestro chrome driver
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			return driver;
+		case "firefox":
+			exePath = Paths.get("").toAbsolutePath().toString() + File.separator + "driver" + File.separator; //Setear el la ruta de nuestro chromredriver
+			System.setProperty("webdriver.gecko.driver", exePath + "geckodriver.exe");
+			driver = new FirefoxDriver();
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			return driver;
+		default:
+			return driver;
+		}
+	}
 }
