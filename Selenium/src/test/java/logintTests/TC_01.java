@@ -12,7 +12,7 @@ import navigationPages.DashboardPage;
 import navigationPages.LoginPage;
 
 public class TC_01 {
-	WebDriver driver = DriverSetup.setupDriver();
+	WebDriver driver = DriverSetup.setupDriver("firefox");
 
 	// Page Object
 	LoginPage login = new LoginPage(driver);
